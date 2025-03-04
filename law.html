@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <href= law.css>
+  <title>Cabinet KSSTENTINI </title>
+  <link href="tribunal-marseille.png" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1d1d1b;
+      --text-color: #1d1d1b;
+      --background-color:rgb(222, 217, 217);
+      --border-color: #1B365D; 
+      font-family:bukhari script; 
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:bukhari script; 
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      font-family:bukhari script; 
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgb(222, 217, 217);
+      z-index: 1000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      font-family:bukhari script; 
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family:bukhari script; 
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+      font-family:bukhari script; 
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-color);
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      position: relative;
+      padding: 5px 0;
+      font-family:bukhari script; 
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--border-color);
+      transition: width 0.3s ease;
+      font-family:bukhari script; 
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+      font-family:bukhari script; 
+    }
+
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1d1d1b;
+      font-family:bukhari script; 
+    }
+
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      font-family:bukhari script; 
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+      font-family:bukhari script; 
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      font-family: bukhari script; 
+    }
+
+    .section {
+      padding: 100px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family:bukhari script; 
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family:bukhari script;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background-color: var(--border-color);
+      font-family:bukhari script; 
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+      font-family:bukhari script; 
+    }
+
+    .expertise-item {
+      background: rgb(222, 217, 217);
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border: 3px solid var(--border-color);
+      font-family:bukhari script; 
+    }
+
+    .expertise-title {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+      font-family:bukhari script; 
+    }
+
+    .expertise-list {
+      list-style: none;
+      font-family:bukhari script; 
+    }
+
+    .expertise-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      font-family:bukhari script; 
+    }
+
+    .expertise-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--border-color);
+      font-family:bukhari script; 
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 60px;
+      font-family:bukhari script; 
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      font-family:bukhari script; 
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      background: rgb(199, 185, 185);
+      font-size: 16px;font-family:bukhari script; 
+
+    }
+
+    .form-textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      background: rgb(208, 187, 187);
+      font-size: 16px;
+      resize: vertical;
+      font-family:bukhari script; 
+    }
+
+    .submit-btn {
+      background: var(--border-color);
+      color: rgb(218, 197, 197);
+      border: none;
+      padding: 15px 30px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family:bukhari script; 
+    }
+
+    .submit-btn:hover {
+      background-color: #132845;
+    }
+
+    .emoji {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"> CABINET KSSTENTINI</div>
+    <nav class="nav">
+      <a href="#accueil" class="nav-link">Accueil</a>
+      <a href="#cabinet" class="nav-link">Le Cabinet</a>
+      <a href="#domaines" class="nav-link">Domaines</a>
+      <a href="#actualites" class="nav-link">Actualités</a>
+      <a href="#honoraires" class="nav-link">Honoraires</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="tribunal-marseille.png" alt="Cabinet d'avocats" class="hero-img">
+    <div class="hero-content">
+      <h1 class="hero-title"></h1>
+      </div>
+  </section>
+
+  <section id="cabinet" class="section">
+    <h2 class="section-title">LE CABINET <span class="emoji"></span></h2>
+    <div class="content">
+      <p>Le cabinet de Maître Jonathan KSSTENTINI met son expertise à votre service en vous accompagnant à chaque étape de la vie de votre entreprise.</p>
+      <br>
+      <p>Fort d'une expérience approfondie en droit des entreprises en difficulté, Maître Jonathan KSSTENTINI propose des solutions juridiques stratégiques pour aider votre entreprise à surmonter les obstacles auxquels elle pourrait être confrontée.</p>
+      <br>
+      <p>Le cabinet s'engage à élaborer des stratégies personnalisées et pragmatiques afin de traiter chaque dossier avec efficacité.</p>
+      <br>
+      <p>Le cabinet intervient devant toutes les juridictions relevant du ressort de la Cour d'appel d'Aix-en-Provence, notamment à Marseille, Aix-en-Provence, Toulon, Draguignan, Cannes et Nice.</p>
+    </div>
+  </section>
+
+  <section id="domaines" class="section">
+    <h2 class="section-title">DOMAINES D'INTERVENTION <span class="emoji"></span></h2>
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <h3 class="expertise-title">DROIT DES SOCIÉTÉS</h3>
+        <ul class="expertise-list">
+          <li>Assistance dans la création et la structuration des sociétés</li>
+          <li>Choix de la forme juridique</li>
+          <li>Rédaction de pactes d'actionnaires</li>
+          <li>Assemblées générales</li>
+          <li>Cession des titres</li>
+          <li>Contentieux</li>
+        </ul>
+      </div>
+      <div class="expertise-item">
+        <h3 class="expertise-title">PROCÉDURES COLLECTIVES</h3>
+        <ul class="expertise-list">
+          <li>Prévention des difficultés (mandat ad hoc, conciliation)</li>
+          <li>Sauvegarde, Redressement, Liquidation judiciaires</li>
+          <li>Accompagnement des dirigeants, créanciers ou organes de la procédure</li>
+          <li>Contentieux des procédures collectives</li>
+        </ul>
+      </div>
+      <div class="expertise-item">
+        <h3 class="expertise-title">CONTENTIEUX DES AFFAIRES</h3>
+        <ul class="expertise-list">
+          <li>Contrats commerciaux</li>
+          <li>Distribution</li>
+          <li>Responsabilité des dirigeants et cautions</li>
+          <li>Recouvrement judiciaire des créances</li>
+        </ul>
+      </div>
+      <div class="expertise-item">
+        <h3 class="expertise-title">DROIT COMMERCIAL</h3>
+        <ul class="expertise-list">
+          <li>Rédaction, négociation et analyse de contrats commerciaux</li>
+          <li>Cession des baux</li>
+          <li>Représentation devant les tribunaux en cas de litiges commerciaux</li>
+        </ul>
+      </div>
+      <div class="expertise-item">
+        <h3 class="expertise-title">DROIT DES ASSURANCES</h3>
+        <ul class="expertise-list">
+          <li>Accidents et dommages corporels</li>
+          <li>Agressions et atteintes</li>
+          <li>Litiges avec assurances</li>
+        </ul>
+      </div>
+      <div class="expertise-item">
+        <h3 class="expertise-title">DROIT DES SÛRETÉS</h3>
+        <ul class="expertise-list">
+          <li>Garanties</li>
+          <li>Cautionnement</li>
+          <li>Privilèges</li>
+          <li>Hypothèques</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="honoraires" class="section">
+    <h2 class="section-title">HONORAIRES</h2>
+    <div class="content">
+      <p>Les honoraires de l'Avocat sont fixés librement, conformément à l'article 11 du Règlement Intérieur National de la profession d'Avocat.</p>
+      <br>
+      <p>Ces honoraires sont établis en toute transparence et varient en fonction de la nature et de la complexité juridique des interventions à effectuer, de l'enjeu économique ainsi que de l'expérience de l'avocat intervenant.</p>
+      <br>
+      <p>En fonction de l'affaire, plusieurs modes de rémunération peuvent être envisagés.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">CONTACT</h2>
+    <div class="contact-form">
+      <div class="form-left">
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Nom *" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-input" placeholder="Email *" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" class="form-input" placeholder="Téléphone">
+        </div>
+      </div>
+      <div class="form-right">
+        <div class="form-group">
+          <textarea class="form-textarea" placeholder="Message *" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

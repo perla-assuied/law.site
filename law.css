@@ -1,0 +1,97 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Pour les petits écrans (mobiles) */
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 15px 20px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .nav {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  
+    .hero {
+      height: 80vh; /* Réduire la taille de l'image sur les mobiles */
+    }
+  
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .expertise-grid {
+      grid-template-columns: 1fr; /* Une colonne sur mobile */
+    }
+  
+    .contact-form {
+      grid-template-columns: 1fr; /* Formulaire en une seule colonne */
+    }
+  
+    .form-left,
+    .form-right {
+      width: 100%; /* Le formulaire prendra toute la largeur */
+    }
+  
+    .form-input, .form-textarea {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .submit-btn {
+      width: 100%; /* Le bouton s'étendra sur toute la largeur */
+    }
+  }
+  
+  /* Pour les tablettes */
+  @media screen and (max-width: 1024px) {
+    .hero-title {
+      font-size: 42px;
+    }
+  
+    .section-title {
+      font-size: 30px;
+    }
+  
+    .expertise-grid {
+      grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les tablettes */
+    }
+  
+    .contact-form {
+      grid-template-columns: 1fr 1fr; /* Deux colonnes pour les tablettes */
+    }
+  }
+  
+  /* Pour les grands écrans (ordinateurs de bureau) */
+  @media screen and (min-width: 1025px) {
+    .hero-title {
+      font-size: 48px;
+    }
+  
+    .section-title {
+      font-size: 32px;
+    }
+  
+    .expertise-grid {
+      grid-template-columns: repeat(3, 1fr); /* Trois colonnes pour les grands écrans */
+    }
+  
+    .contact-form {
+      grid-template-columns: 1fr 1fr; /* Deux colonnes pour les formulaires */
+    }
+  }
+  
